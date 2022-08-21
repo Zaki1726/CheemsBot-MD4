@@ -1,6 +1,6 @@
 //════════════════════════════//
 //If you want to recode, reupload
-//or copy the codes/script,
+//or copy the codes/script 
 //pls give credit
 //no credit? i will take action immediately
 //© 2022 Xeon Bot Inc. Cheems Bot MD
@@ -630,11 +630,11 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@
 //anti bad words by xeon
 if (antiToxic)
 if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+tos = ['Anda Akan Di Kick Jika Anda Toxix!']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
 reply(sin)
 if (m.text) {
-bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+bvl = `Anda Akan Di Kick Jika Anda Toxix!`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
@@ -1096,7 +1096,8 @@ const latensie = speed() - timestampe
                 const menulist = `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
-┌┤✑  How Are You? 😄
+┌┤✑   Selamat  Datang di
+│Bot Azhil😁
 │└────────────┈ ⳹
 │
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
@@ -8766,8 +8767,8 @@ title:"I deserve something for my hardwork",
 body: "Click to donate", 
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://telegra.ph/file/8737b098fd5702daeb7e0.jpg',
-sourceUrl: "https://telegra.ph/file/8737b098fd5702daeb7e0.jpg"
+mediaUrl: 'https://wa.me/6285817964582',
+sourceUrl: "https://wa.me/6285817964582"
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
