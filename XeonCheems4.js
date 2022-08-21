@@ -1160,9 +1160,9 @@ switch(command) {
  if (isBan) return reply(mess.ban)	 			
 if (!isCreator) return replay(mess.owner)
 if (args[0] === "on") {
-if (isBanChat) return replay('Already Banned')
+if (isBanChat) return replay('Sudah di Banned')
 banchat.push(from)
-replay('Success in banning the gc')
+replay('Sukses Ban Chat')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -1197,14 +1197,14 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User was already banned')
+if (isBane) return ads('Pengguna sudah dibanned')
 banUser.push(orgnye)
 replay(`Successfully banned the user`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User was already unbanned')
+if (!isBane) return ads('Pengguna Berhasil Di Unban')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user`)
+replay(`Berhasil Ban Pengguna`)
 } else {
 replay("Error")
 }
@@ -1221,19 +1221,19 @@ if (q.includes('--help')) return reply(examkosong)
      
      var XeonBotInc = await getBuffer(picak+`User's Inventory`)
      let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
-     teksehmazeh += `*❤️Your Blood* : ${getDarah(m.sender)}\n`
-     teksehmazeh += `*◻️️Your Iron* : ${getBesi(m.sender)}\n`
-     teksehmazeh += `*🌟Your Gold* : ${getEmas(m.sender)}\n`
-     teksehmazeh += `*💎Your Emerald* : ${getEmerald(m.sender)}\n`
-     teksehmazeh += `*⏺️Your Limit* : ${getLimit(m.sender)}\n`
-     teksehmazeh += `*🧪Your Potion* : ${getPotion(m.sender)}\n\n`
+     teksehmazeh += `*⭐Darah* : ${getDarah(m.sender)}\n`
+     teksehmazeh += `*◻️️Besi* : ${getBesi(m.sender)}\n`
+     teksehmazeh += `*🌟Emas* : ${getEmas(m.sender)}\n`
+     teksehmazeh += `*💎Emerald* : ${getEmerald(m.sender)}\n`
+     teksehmazeh += `*⏺️Limit* : ${getLimit(m.sender)}\n`
+     teksehmazeh += `*🧪Ramuan* : ${getPotion(m.sender)}\n\n`
      teksehmazeh += `_[ 🐺HUNT RESULT🐺 ]_\n`
-     teksehmazeh += `*🐟Fish* : ${getIkan(m.sender)}\n`
-     teksehmazeh += `*🐔Chicken* : ${getAyam(m.sender)}\n`
-     teksehmazeh += `*🐇Rabbit* : ${getKelinci(m.sender)}\n`
-     teksehmazeh += `*🐑Sheep* : ${getDomba(m.sender)}\n`
-     teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
-     teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
+     teksehmazeh += `*🐟Ikan* : ${getIkan(m.sender)}\n`
+     teksehmazeh += `*🐔Ayam* : ${getAyam(m.sender)}\n`
+     teksehmazeh += `*🐇Kelinci* : ${getKelinci(m.sender)}\n`
+     teksehmazeh += `*🐑Domba* : ${getDomba(m.sender)}\n`
+     teksehmazeh += `*🐄Sapi* : ${getSapi(m.sender)}\n`
+     teksehmazeh += `*🐘Gajah* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
      await XeonBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, XeonBotInc, [{"urlButton": {"displayText": "YouTube📍","url": `${websitex}`}}])
   }
@@ -1256,12 +1256,12 @@ if (isBanChat) return reply(mess.banChat)
    let txt = `「 *LEADERBOARD* 」\n\n`
      for (let i of _buruan){
      txt += `➸ *ID :* ${i.id}\n`
-     txt += `*🐟Fish* : ${i.ikan}\n`
-     txt += `*🐔Chicken* : ${i.ayam}\n`
-     txt += `*🐇Rabbit* : ${i.kelinci}\n`
-     txt += `*🐑Sheep* : ${i.domba}\n`
-     txt += `*🐄Cow* : ${i.sapi}\n`
-     txt += `*🐘Elephant* : ${i.gajah}\n\n`
+     txt += `*🐟Ikan* : ${i.ikan}\n`
+     txt += `*🐔Ayam* : ${i.ayam}\n`
+     txt += `*🐇Kelinci* : ${i.kelinci}\n`
+     txt += `*🐑Domba* : ${i.domba}\n`
+     txt += `*🐄Sapi* : ${i.sapi}\n`
+     txt += `*🐘Gajah* : ${i.gajah}\n\n`
      }
     reply(txt)       
   }
@@ -1359,7 +1359,7 @@ if (isBanChat) return reply(mess.banChat)
  if (!isInventoryMonay){ addInventoriMonay(m.sender) }
  if (!isInventory){ addInventori(m.sender) }
  var anu = args[1]
- if (args[0] === 'fish'){
+ if (args[0] === 'ikan'){
  if (isIkan < anu) return reply(`You Don't Have Enough Fish(es) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
  kurangIkan(m.sender, anu)
@@ -1369,7 +1369,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Fish(es)* : ${getIkan(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'chicken'){
+ if (args[0] === 'ayam'){
  if (isAyam < anu) return reply(`You Don't Have Enough Chicken(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
  kurangAyam(m.sender, anu)
@@ -1379,7 +1379,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Chicken* : ${getAyam(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'rabbit'){
+ if (args[0] === 'kelinci'){
  if (isKelinci < anu) return reply(`You Don't Have Enough Rabbit(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
  kurangKelinci(m.sender, anu)
@@ -1389,7 +1389,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Rabbit(s)* : ${getKelinci(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'sheep'){
+ if (args[0] === 'domba'){
  if (isDomba < anu) return reply(`You Don't Have Enough Sheep(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
  kurangDomba(m.sender, anu)
@@ -1399,7 +1399,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Sheep(s)* : ${getDomba(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'cow'){
+ if (args[0] === 'sapi'){
  if (isSapi < anu) return reply(`You Don't Have Enough Cow(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
  kurangSapi(m.sender, anu)
@@ -1409,7 +1409,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Cow(s)* : ${getSapi(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'elephant'){
+ if (args[0] === 'gajah'){
  if (isGajah < anu) return reply(`You Don't Have Enough Elephant(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
  kurangGajah(m.sender, anu)
@@ -1419,7 +1419,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Elephant(s)* : ${getGajah(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'iron'){
+ if (args[0] === 'besi'){
  if (isBesi < anu) return reply(`You Don't Have Enough Iron(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
  kurangBesi(m.sender, anu)
@@ -1429,7 +1429,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Iron(s)* : ${getBesi(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'gold'){
+ if (args[0] === 'emas'){
  if (isEmas < anu) return reply(`You Don't Have Enough Gold(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
  kurangEmas(m.sender, anu)
@@ -1505,12 +1505,12 @@ if (q.includes('--help')) return reply(examkosong)
    }
  setTimeout( () => {
   let teksehmazeh = `_[ HUNT RESULT ]_\n`
-     teksehmazeh += `*🐟Fish* : ${ikanmu}\n`
-     teksehmazeh += `*🐔Chicken* : ${ayam}\n`
-     teksehmazeh += `*🐇Rabbit* : ${kelinci}\n`
-     teksehmazeh += `*🐑Sheep* : ${domba}\n`
-     teksehmazeh += `*🐄Cow* : ${sapi}\n`
-     teksehmazeh += `*🐘Elephant* : ${gajah}\n\n`
+     teksehmazeh += `*🐟Ikan* : ${ikanmu}\n`
+     teksehmazeh += `*🐔Ayam* : ${ayam}\n`
+     teksehmazeh += `*🐇Kelinci* : ${kelinci}\n`
+     teksehmazeh += `*🐑Domba* : ${domba}\n`
+     teksehmazeh += `*🐄Sapi* : ${sapi}\n`
+     teksehmazeh += `*🐘Gajah* : ${gajah}\n\n`
      teksehmazeh += `_[ INFO ]_\n`
      teksehmazeh += `*Location* : ${lokasinya}\n`
      teksehmazeh += `*Wounded* : ${lukanya}, blood - 10\n`
@@ -1565,7 +1565,7 @@ if (isBanChat) return reply(mess.banChat)
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                reply(`${m.pushName} Has Gone Afk/Offline${text ? ': ' + text : ''}`)
+                reply(`${m.pushName} Beliau Sedang Afk Karena${text ? ': ' + text : ''}`)
             }
             break	
         case 'ttc': case 'ttt': case 'tictactoe': {
@@ -1612,10 +1612,10 @@ Type *surrender* to surrender and admit defeat`
             x: m.chat,
             o: '',
             game: new TicTacToe(m.sender, 'o'),
-            state: 'WAITING'
+            state: 'TUNGGU'
             }
             if (text) room.name = text
-            reply('Waiting For Partner' + (text ? ` Type The Command Below ${prefix}${command} ${text}` : ''))
+            reply('Sedang Mencari Partner' + (text ? ` Type The Command Below ${prefix}${command} ${text}` : ''))
             this.game[room.id] = room
             }
             }
@@ -8780,27 +8780,27 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube 🍒',
+                                    displayText: 'YouTube',
                                     url: `${websitex}`
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Script 🍜',
+                                    displayText: 'Script',
                                     url: `${botscript}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
+                                    displayText: 'All Menu',
                                     id: 'allmenu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu 🍢',
+                                    displayText: 'List Menu',
                                     id: 'command'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner 🤣',
+                                    displayText: 'Owner',
                                     id: 'owner'
                                 }
                             }]
